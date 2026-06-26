@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>易境通 - 跨境打单发货管理系统 | 让每一笔跨境订单更高效地完成履约</title>
+  <meta name="description" content="易境通是一款面向跨境电商卖家、货代企业、海外仓和尾程账号资源方的跨境打单发货管理系统。支持100+全球尾程物流渠道、订单同步、国际面单批量打印、一键比价、物流轨迹回传、多币种结算。">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+  <!-- ========== 顶部导航 ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-mark">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7v6c0 5 3.8 9.7 9 11 5.2-1.3 9-6 9-11V7l-9-5z" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        易境通
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="active">首页</a></li>
+        <li><a href="products.html">产品功能</a></li>
+        <li><a href="products.html#solution">解决方案</a></li>
+        <li><a href="products.html#ecology">渠道生态</a></li>
+        <li><a href="products.html#open">开放平台</a></li>
+        <li><a href="about.html#cases">客户案例</a></li>
+        <li><a href="contact.html">帮助中心</a></li>
+        <li><a href="about.html">关于我们</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="contact.html" class="btn btn--outline">预约演示</a>
+        <a href="contact.html" class="btn btn--primary">免费体验</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="菜单"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- ========== 1. 首屏 Hero ========== -->
+  <section class="hero">
+    <div class="hero-bg">
+      <svg viewBox="0 0 1440 720" preserveAspectRatio="xMidYMid slice" fill="none">
+        <!-- 经纬线网格 -->
+        <g stroke="rgba(255,255,255,.06)" stroke-width="1">
+          <line x1="0" y1="180" x2="1440" y2="180"/><line x1="0" y1="360" x2="1440" y2="360"/><line x1="0" y1="540" x2="1440" y2="540"/>
+          <line x1="240" y1="0" x2="240" y2="720"/><line x1="480" y1="0" x2="480" y2="720"/><line x1="720" y1="0" x2="720" y2="720"/><line x1="960" y1="0" x2="960" y2="720"/><line x1="1200" y1="0" x2="1200" y2="720"/>
+        </g>
+        <!-- 物流连接线 -->
+        <g stroke="rgba(34,211,238,.25)" stroke-width="1.5" stroke-dasharray="4 4">
+          <path d="M200 400 Q500 200 800 350 T1300 300"/>
+          <path d="M150 500 Q600 600 1000 450 T1350 500"/>
+          <path d="M300 300 Q700 100 1100 250"/>
+        </g>
+        <!-- 节点 -->
+        <g fill="rgba(34,211,238,.5)">
+          <circle cx="200" cy="400" r="4"/><circle cx="800" cy="350" r="5"/><circle cx="1300" cy="300" r="4"/>
+          <circle cx="150" cy="500" r="4"/><circle cx="1000" cy="450" r="5"/><circle cx="1350" cy="500" r="4"/>
+          <circle cx="300" cy="300" r="3"/><circle cx="1100" cy="250" r="4"/>
+        </g>
+        <!-- 浮动面单卡片 -->
+        <g opacity=".15">
+          <rect x="80" y="120" width="120" height="80" rx="8" fill="#fff" transform="rotate(-8 140 160)"/>
+          <rect x="1180" y="480" width="130" height="90" rx="8" fill="#fff" transform="rotate(6 1245 525)"/>
+        </g>
+      </svg>
+    </div>
+    <div class="hero-glow hero-glow--1"></div>
+    <div class="hero-glow hero-glow--2"></div>
+
+    <div class="container">
+      <div class="hero-inner">
+        <!-- 左侧内容 -->
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="dot"></span>
+            跨境打单发货管理系统 · 新一代 SaaS 履约平台
+          </div>
+          <h1 class="hero-title">
+            跨境打单发货<br><span class="grad">管理系统</span>
+          </h1>
+          <p class="hero-sub">让每一笔跨境订单更高效地完成履约</p>
+          <p class="hero-desc">
+            对接主流跨境电商平台与 100+ 全球尾程物流渠道，支持订单同步、渠道比价、国际面单打印、物流轨迹回传、多币种结算与客户账单管理。
+          </p>
+          <div class="hero-actions">
+            <a href="contact.html" class="btn btn--white btn--lg">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M5 4l14 8-14 8V4z" fill="currentColor"/></svg>
+              预约产品演示
+            </a>
+            <a href="contact.html" class="btn btn--ghost btn--lg">免费体验</a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <div class="num">100<span>+</span></div>
+              <div class="label">全球尾程渠道</div>
+            </div>
+            <div class="hero-stat">
+              <div class="num">99.9<span>%</span></div>
+              <div class="label">系统可用性</div>
+            </div>
+            <div class="hero-stat">
+              <div class="num">50<span>万+</span></div>
+              <div class="label">日处理订单量</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 右侧预约表单 -->
+        <div class="hero-form" id="heroFormCard">
+          <form id="demoForm">
+            <h3>预约产品演示</h3>
+            <p class="form-sub">填写信息，专属顾问 1 对 1 为您服务</p>
+            <div class="form-group">
+              <label>手机号 <span class="req">*</span></label>
+              <input type="tel" class="form-control" name="phone" placeholder="请输入您的手机号" required>
+            </div>
+            <div class="form-group">
+              <label>公司名称 <span class="req">*</span></label>
+              <input type="text" class="form-control" name="company" placeholder="请输入公司名称" required>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>业务类型 <span class="req">*</span></label>
+                <select class="form-control" name="bizType" required>
+                  <option value="">请选择</option>
+                  <option>跨境电商卖家</option>
+                  <option>货代企业</option>
+                  <option>海外仓企业</option>
+                  <option>尾程账号资源方</option>
+                  <option>其他</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>预计日均单量 <span class="req">*</span></label>
+                <select class="form-control" name="dailyVolume" required>
+                  <option value="">请选择</option>
+                  <option>500 单以下</option>
+                  <option>500 - 2000 单</option>
+                  <option>2000 - 10000 单</option>
+                  <option>10000 单以上</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="btn btn--primary btn--block btn--lg">立即预约演示</button>
+            <p class="form-footer">提交即表示同意《易境通服务协议》与《隐私政策》</p>
+          </form>
+          <div class="form-success" id="formSuccess">
+            <div class="check">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h4>预约成功！</h4>
+            <p>专属顾问将在 1 个工作日内与您联系<br>请保持手机畅通</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 2. 数据背书 ========== -->
+  <section class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <div class="stat-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" stroke="#2563eb" stroke-width="1.8"/><path d="M2 12h20M12 2c2.5 2.7 4 6.2 4 10s-1.5 7.3-4 10c-2.5-2.7-4-6.2-4-10s1.5-7.3 4-10z" stroke="#2563eb" stroke-width="1.8"/></svg>
+          </div>
+          <div class="stat-num" data-count="100">0<span class="unit">+</span></div>
+          <div class="stat-label">全球尾程物流渠道</div>
+        </div>
+        <div class="stat-item reveal reveal-d1">
+          <div class="stat-icon">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="#06b6d4" stroke-width="1.8"/><path d="M3 9h18M8 14h5" stroke="#06b6d4" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <div class="stat-num" data-count="20">0<span class="unit">+</span></div>
+          <div class="stat-label">主流跨境电商平台</div>
+        </div>
+        <div class="stat-item reveal reveal-d2">
+          <div class="stat-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="#7c3aed" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="stat-num">多<span class="unit">币种</span></div>
+          <div class="stat-label">结算管理</div>
+        </div>
+        <div class="stat-item reveal reveal-d3">
+          <div class="stat-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="stat-num">全<span class="unit">流程</span></div>
+          <div class="stat-label">履约管理</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 3. 为什么选择易境通 ========== -->
+  <section class="section section--soft" id="painpoints">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-eyebrow">WHY US</span>
+        <h2 class="section-title">为什么选择易境通</h2>
+        <p class="section-sub">直击跨境打单发货 6 大核心痛点，用系统化能力让履约更简单</p>
+      </div>
+      <div class="pain-grid">
+        <!-- 痛点1 -->
+        <div class="pain-card reveal">
+          <div class="pain-num">PAIN 01</div>
+          <div class="pain-icon">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="6" width="9" height="12" rx="1.5" stroke="#2563eb" stroke-width="1.8"/><rect x="13" y="6" width="9" height="12" rx="1.5" stroke="#06b6d4" stroke-width="1.8"/><path d="M11 12h2" stroke="#94a3b8" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="2 2"/></svg>
+          </div>
+          <h3>多平台订单分散</h3>
+          <p class="pain-q">多个平台后台来回切换，订单容易漏发错发？</p>
+          <p class="pain-solution"><strong>解决方案：</strong>统一订单中台，全平台订单自动同步聚合，支持按规则自动分仓分渠道，一处管理全局履约。</p>
+        </div>
+        <!-- 痛点2 -->
+        <div class="pain-card reveal reveal-d1">
+          <div class="pain-num">PAIN 02</div>
+          <div class="pain-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M3 9l9-6 9 6v11a1 1 0 01-1 1H4a1 1 0 01-1-1V9z" stroke="#06b6d4" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="14" r="2.5" stroke="#06b6d4" stroke-width="1.8"/></svg>
+          </div>
+          <h3>尾程渠道复杂</h3>
+          <p class="pain-q">各国尾程渠道众多，账号分散管理困难？</p>
+          <p class="pain-solution"><strong>解决方案：</strong>100+ 全球尾程渠道统一接入，账号集中托管，支持渠道分组、权限隔离与配额管理。</p>
+        </div>
+        <!-- 痛点3 -->
+        <div class="pain-card reveal reveal-d2">
+          <div class="pain-num">PAIN 03</div>
+          <div class="pain-icon">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="3" width="16" height="18" rx="2" stroke="#7c3aed" stroke-width="1.8"/><path d="M8 8h8M8 12h8M8 16h5" stroke="#7c3aed" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>面单打印低效</h3>
+          <p class="pain-q">逐张打印面单耗时耗力，高峰期排队等待？</p>
+          <p class="pain-solution"><strong>解决方案：</strong>国际面单批量打印，支持热敏 / A4 多规格，自定义模板，千单秒级完成，打印零等待。</p>
+        </div>
+        <!-- 痛点4 -->
+        <div class="pain-card reveal">
+          <div class="pain-num">PAIN 04</div>
+          <div class="pain-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s8-7 8-13a8 8 0 10-16 0c0 6 8 13 8 13z" stroke="#ea580c" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="9" r="2.5" stroke="#ea580c" stroke-width="1.8"/><path d="M9 9l-2 0M17 9l-2 0" stroke="#ea580c" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>地址异常难识别</h3>
+          <p class="pain-q">海外地址格式各异，错误地址导致退件损失？</p>
+          <p class="pain-solution"><strong>解决方案：</strong>智能地址校验引擎，自动识别格式异常、邮编错误与禁运区域，发货前拦截风险。</p>
+        </div>
+        <!-- 痛点5 -->
+        <div class="pain-card reveal reveal-d1">
+          <div class="pain-num">PAIN 05</div>
+          <div class="pain-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="#db2777" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="17" cy="5" r="1.5" fill="#db2777"/><circle cx="6" cy="19" r="1.5" fill="#db2777"/></svg>
+          </div>
+          <h3>费用结算不清晰</h3>
+          <p class="pain-q">多币种多渠道费用混乱，对账耗时易错？</p>
+          <p class="pain-solution"><strong>解决方案：</strong>多币种自动结算与客户账单管理，实时汇率换算，费用明细可追溯，一键生成对账单。</p>
+        </div>
+        <!-- 痛点6 -->
+        <div class="pain-card reveal reveal-d2">
+          <div class="pain-num">PAIN 06</div>
+          <div class="pain-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0118 0z" stroke="#16a34a" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="10" r="3" stroke="#16a34a" stroke-width="1.8"/><path d="M12 13v4M10 15h4" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>轨迹查询麻烦</h3>
+          <p class="pain-q">逐单查询物流轨迹，无法主动掌握异常？</p>
+          <p class="pain-solution"><strong>解决方案：</strong>物流轨迹自动回传与平台同步，异常节点实时预警，全链路可视化追踪。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 4. 核心功能矩阵 ========== -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-eyebrow">CORE FEATURES</span>
+        <h2 class="section-title">核心功能矩阵</h2>
+        <p class="section-sub">八大核心能力，覆盖跨境打单发货全链路</p>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon fi-1"><svg viewBox="0 0 24 24" fill="none"><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18" stroke="currentColor" stroke-width="1.8"/></svg></div>
+          <h3>订单同步</h3>
+          <p>全平台订单自动拉取，实时同步库存与状态，支持订单合并与拆分。</p>
+        </div>
+        <div class="feature-card reveal reveal-d1">
+          <div class="feature-icon fi-2"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9V4h12v5M6 18h12v3H6v-3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M6 9h12v9H6V9zM10 13h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+          <h3>批量打单</h3>
+          <p>国际面单批量打印，热敏 / A4 多规格，自定义模板千单秒出。</p>
+        </div>
+        <div class="feature-card reveal reveal-d2">
+          <div class="feature-icon fi-3"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="14" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="3" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="14" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.8"/></svg></div>
+          <h3>渠道管理</h3>
+          <p>100+ 尾程渠道集中托管，账号分组管理，配额监控与权限隔离。</p>
+        </div>
+        <div class="feature-card reveal reveal-d3">
+          <div class="feature-icon fi-4"><svg viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 7h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>一键比价</h3>
+          <p>多渠道运费实时对比，智能推荐最优渠道，自动计算时效与成本。</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon fi-5"><svg viewBox="0 0 24 24" fill="none"><path d="M12 22s8-7 8-13a8 8 0 10-16 0c0 6 8 13 8 13z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 11l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>地址校验</h3>
+          <p>智能识别地址格式异常与邮编错误，发货前自动拦截风险订单。</p>
+        </div>
+        <div class="feature-card reveal reveal-d1">
+          <div class="feature-icon fi-6"><svg viewBox="0 0 24 24" fill="none"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0118 0z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 11l3 3 5-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>轨迹回传</h3>
+          <p>物流轨迹自动抓取与平台回传，异常节点实时预警，全链路追踪。</p>
+        </div>
+        <div class="feature-card reveal reveal-d2">
+          <div class="feature-icon fi-7"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.4 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1 0-2-.5-2.5-1.5M12 6v2M12 16v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+          <h3>多币种结算</h3>
+          <p>实时汇率自动换算，多币种费用统一结算，账单明细可追溯。</p>
+        </div>
+        <div class="feature-card reveal reveal-d3">
+          <div class="feature-icon fi-8"><svg viewBox="0 0 24 24" fill="none"><path d="M9 2h6v2H9V2zM4 6h16v15a1 1 0 01-1 1H5a1 1 0 01-1-1V6z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 11h6M9 15h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+          <h3>客户账单</h3>
+          <p>自动生成客户账单与对账单，分账管理清晰透明，支持导出报表。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 5. 支持平台与渠道生态 ========== -->
+  <section class="section section--soft" id="ecology">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-eyebrow">ECOSYSTEM</span>
+        <h2 class="section-title">支持平台与渠道生态</h2>
+        <p class="section-sub">广泛接入主流跨境电商平台与全球尾程物流渠道，构建完整履约网络</p>
+      </div>
+      <div class="eco-tabs reveal">
+        <button class="eco-tab active" data-tab="platforms">跨境电商平台</button>
+        <button class="eco-tab" data-tab="channels">尾程物流渠道</button>
+      </div>
+
+      <!-- 平台 Logo 墙 -->
+      <div class="eco-panel active" id="platforms">
+        <div class="logo-wall">
+          <div class="logo-item reveal"><div class="logo-img" style="background:#ff9900">A</div><span class="logo-name">Amazon</span></div>
+          <div class="logo-item reveal reveal-d1"><div class="logo-img" style="background:#c77b30">e</div><span class="logo-name">eBay</span></div>
+          <div class="logo-item reveal reveal-d2"><div class="logo-img" style="background:#ee4d2d">S</div><span class="logo-name">Shopee</span></div>
+          <div class="logo-item reveal reveal-d3"><div class="logo-img" style="background:#f6821e">A</div><span class="logo-name">AliExpress</span></div>
+          <div class="logo-item reveal"><div class="logo-img" style="background:#0f146d">L</div><span class="logo-name">Lazada</span></div>
+          <div class="logo-item reveal reveal-d1"><div class="logo-img" style="background:#ff0042">W</div><span class="logo-name">Wish</span></div>
+          <div class="logo-item reveal reveal-d2"><div class="logo-img" style="background:#000000">M</div><span class="logo-name">Mercado Libre</span></div>
+          <div class="logo-item reveal reveal-d3"><div class="logo-img" style="background:#4a2545">C</div><span class="logo-name">Coupang</span></div>
+          <div class="logo-item reveal"><div class="logo-img" style="background:#005baa">W</div><span class="logo-name">Walmart</span></div>
+          <div class="logo-item reveal reveal-d1"><div class="logo-img" style="background:#0a2540">E</div><span class="logo-name">Etsy</span></div>
+          <div class="logo-item reveal reveal-d2"><div class="logo-img" style="background:#0033c9">R</div><span class="logo-name">Rakuten</span></div>
+          <div class="logo-item reveal reveal-d3"><div class="logo-img" style="background:#f6342e">O</div><span class="logo-name">OZON</span></div>
+        </div>
+      </div>
+
+      <!-- 渠道 Logo 墙 -->
+      <div class="eco-panel" id="channels">
+        <div class="logo-wall">
+          <div class="logo-item reveal"><div class="logo-img" style="background:#4d148c">U</div><span class="logo-name">UPS</span></div>
+          <div class="logo-item reveal reveal-d1"><div class="logo-img" style="background:#6364a1">F</div><span class="logo-name">FedEx</span></div>
+          <div class="logo-item reveal reveal-d2"><div class="logo-img" style="background:#f3a712">D</div><span class="logo-name">DHL</span></div>
+          <div class="logo-item reveal reveal-d3"><div class="logo-img" style="background:#336699">U</div><span class="logo-name">USPS</span></div>
+          <div class="logo-item reveal"><div class="logo-img" style="background:#e30613">R</div><span class="logo-name">Royal Mail</span></div>
+          <div class="logo-item reveal reveal-d1"><div class="logo-img" style="background:#ff6600">H</div><span class="logo-name">Hermes</span></div>
+          <div class="logo-item reveal reveal-d2"><div class="logo-img" style="background:#fbb034">Y</div><span class="logo-name">Yodel</span></div>
+          <div class="logo-item reveal reveal-d3"><div class="logo-img" style="background:#d52b1e">L</div><span class="logo-name">La Poste</span></div>
+          <div class="logo-item reveal"><div class="logo-img" style="background:#004a98">C</div><span class="logo-name">Correos</span></div>
+          <div class="logo-item reveal reveal-d1"><div class="logo-img" style="background:#0078d4">P</div><span class="logo-name">PostNord</span></div>
+          <div class="logo-item reveal reveal-d2"><div class="logo-img" style="background:#00833e">J</div><span class="logo-name">Japan Post</span></div>
+          <div class="logo-item reveal reveal-d3"><div class="logo-img" style="background:#1a3668">A</div><span class="logo-name">Australia Post</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 6. 跨境履约管理体系 ========== -->
+  <section class="section" id="flow">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-eyebrow">FULFILLMENT SYSTEM</span>
+        <h2 class="section-title">跨境履约管理体系</h2>
+        <p class="section-sub">从订单到结算的全链路闭环，每一步都可监控、可追溯、可优化</p>
+      </div>
+      <div class="flow-wrap reveal">
+        <div class="flow-track">
+          <div class="flow-step">
+            <div class="flow-node">
+              <span class="step-num">1</span>
+              <svg viewBox="0 0 24 24" fill="none"><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18" stroke="currentColor" stroke-width="1.8"/></svg>
+            </div>
+            <h4>订单同步</h4>
+            <p>多平台订单自动拉取聚合</p>
+          </div>
+          <div class="flow-step">
+            <div class="flow-node">
+              <span class="step-num">2</span>
+              <svg viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 7h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h4>渠道比价</h4>
+            <p>智能推荐最优物流渠道</p>
+          </div>
+          <div class="flow-step">
+            <div class="flow-node">
+              <span class="step-num">3</span>
+              <svg viewBox="0 0 24 24" fill="none"><path d="M6 9V4h12v5M6 18h12v3H6v-3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M6 9h12v9H6V9z" stroke="currentColor" stroke-width="1.8"/></svg>
+            </div>
+            <h4>面单打印</h4>
+            <p>批量生成国际面单</p>
+          </div>
+          <div class="flow-step">
+            <div class="flow-node">
+              <span class="step-num">4</span>
+              <svg viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h4>发货回传</h4>
+            <p>物流单号自动回传平台</p>
+          </div>
+          <div class="flow-step">
+            <div class="flow-node">
+              <span class="step-num">5</span>
+              <svg viewBox="0 0 24 24" fill="none"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0118 0z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.8"/></svg>
+            </div>
+            <h4>轨迹更新</h4>
+            <p>全程物流轨迹实时追踪</p>
+          </div>
+          <div class="flow-step">
+            <div class="flow-node">
+              <span class="step-num">6</span>
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.4 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1 0-2-.5-2.5-1.5M12 6v2M12 16v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </div>
+            <h4>费用结算</h4>
+            <p>多币种结算与账单管理</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 7. 服务对象 ========== -->
+  <section class="section section--soft" id="audience">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-eyebrow">WHO WE SERVE</span>
+        <h2 class="section-title">服务对象</h2>
+        <p class="section-sub">为跨境物流生态各方提供专业打单发货解决方案</p>
+      </div>
+      <div class="audience-grid">
+        <div class="audience-card reveal">
+          <div class="ac-icon ac-1"><svg viewBox="0 0 24 24" fill="none"><path d="M3 9l1-5h16l1 5M3 9v11a1 1 0 001 1h16a1 1 0 001-1V9M3 9h18M9 13h6" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>跨境电商卖家</h3>
+          <p>多平台多店铺卖家，需要统一管理订单与发货履约</p>
+          <div class="ac-tags">
+            <span class="ac-tag">多店铺管理</span>
+            <span class="ac-tag">自动打单</span>
+            <span class="ac-tag">轨迹回传</span>
+          </div>
+        </div>
+        <div class="audience-card reveal reveal-d1">
+          <div class="ac-icon ac-2"><svg viewBox="0 0 24 24" fill="none"><path d="M1 3h15v13H1V3zM16 8h4l3 3v5h-7V8z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/><circle cx="5.5" cy="18.5" r="1.8" stroke="#fff" stroke-width="1.8"/><circle cx="18.5" cy="18.5" r="1.8" stroke="#fff" stroke-width="1.8"/></svg></div>
+          <h3>货代企业</h3>
+          <p>为客户提供打单发货服务，需要高效批量处理能力</p>
+          <div class="ac-tags">
+            <span class="ac-tag">批量处理</span>
+            <span class="ac-tag">客户账单</span>
+            <span class="ac-tag">分账管理</span>
+          </div>
+        </div>
+        <div class="audience-card reveal reveal-d2">
+          <div class="ac-icon ac-3"><svg viewBox="0 0 24 24" fill="none"><path d="M3 21V8l9-5 9 5v13M3 21h18M9 21v-6h6v6M9 11h.01M15 11h.01" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>海外仓企业</h3>
+          <p>管理仓储发货流程，需要与平台和物流渠道深度对接</p>
+          <div class="ac-tags">
+            <span class="ac-tag">仓配协同</span>
+            <span class="ac-tag">API对接</span>
+            <span class="ac-tag">渠道管理</span>
+          </div>
+        </div>
+        <div class="audience-card reveal reveal-d3">
+          <div class="ac-icon ac-4"><svg viewBox="0 0 24 24" fill="none"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z" stroke="#fff" stroke-width="1.8"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 11-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 110-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 114 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 110 4h-.09a1.65 1.65 0 00-1.51 1z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+          <h3>尾程账号资源方</h3>
+          <p>持有尾程物流账号资源，需要安全高效的账号管理体系</p>
+          <div class="ac-tags">
+            <span class="ac-tag">账号托管</span>
+            <span class="ac-tag">权限隔离</span>
+            <span class="ac-tag">配额监控</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 8. 客户评价 ========== -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-eyebrow">CUSTOMER VOICES</span>
+        <h2 class="section-title">客户评价</h2>
+        <p class="section-sub">听听他们如何用易境通提升跨境履约效率</p>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card reveal">
+          <div class="stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          </div>
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text">接入易境通后，我们 6 个平台的订单全部在一个系统里管理，再也不用来回切换后台。批量打单功能让我们大促期间的发货效率提升了 3 倍，地址校验也帮我们减少了很多退件损失。</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background:linear-gradient(135deg,#2563eb,#06b6d4)">林</div>
+            <div class="author-info">
+              <div class="author-name">林总监</div>
+              <div class="author-role">深圳 · 跨境电商卖家</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal reveal-d1">
+          <div class="stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          </div>
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text">作为货代公司，客户账单和分账管理一直是我们最头疼的问题。易境通的多币种结算功能非常实用，自动生成对账单，节省了大量人力。100+ 尾程渠道集中管理也让我们的业务拓展更顺畅。</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background:linear-gradient(135deg,#7c3aed,#8b5cf6)">陈</div>
+            <div class="author-info">
+              <div class="author-name">陈总</div>
+              <div class="author-role">广州 · 货代企业负责人</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal reveal-d2">
+          <div class="stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          </div>
+          <div class="testimonial-quote">"</div>
+          <p class="testimonial-text">我们运营美国和欧洲两个海外仓，最看重系统的 API 对接能力和轨迹回传功能。易境通的接口文档清晰，对接速度快，轨迹更新及时，客户查件体验提升了很多。系统稳定性也很好。</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background:linear-gradient(135deg,#06b6d4,#22d3ee)">王</div>
+            <div class="author-info">
+              <div class="author-name">王经理</div>
+              <div class="author-role">上海 · 海外仓运营总监</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 9. 三步快速上手 ========== -->
+  <section class="section section--soft" id="steps">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-eyebrow">GET STARTED</span>
+        <h2 class="section-title">三步快速上手</h2>
+        <p class="section-sub">极简接入流程，最快当天即可开始打单发货</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card reveal">
+          <div class="step-num-big">01</div>
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="1.8"/></svg>
+          </div>
+          <h3>注册账号并开通系统</h3>
+          <p>在线注册易境通账号，选择适合的套餐，1 分钟开通系统权限。</p>
+          <div class="step-time">
+            <svg viewBox="0 0 24 24" fill="none" width="14"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            约 1 分钟
+          </div>
+        </div>
+        <div class="step-card reveal reveal-d1">
+          <div class="step-num-big">02</div>
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4M12 2a10 10 0 100 20 10 10 0 000-20z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12h20" stroke="currentColor" stroke-width="1.8"/></svg>
+          </div>
+          <h3>接入平台与物流渠道</h3>
+          <p>授权绑定跨境电商平台店铺，配置尾程物流渠道账号与面单模板。</p>
+          <div class="step-time">
+            <svg viewBox="0 0 24 24" fill="none" width="14"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            约 30 分钟
+          </div>
+        </div>
+        <div class="step-card reveal reveal-d2">
+          <div class="step-num-big">03</div>
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M6 9V4h12v5M6 18h12v3H6v-3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M6 9h12v9H6V9zM10 13h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>同步订单并开始打单</h3>
+          <p>订单自动同步至系统，一键比价选择渠道，批量打印面单发货。</p>
+          <div class="step-time">
+            <svg viewBox="0 0 24 24" fill="none" width="14"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            即时生效
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 10. 底部 CTA ========== -->
+  <section class="cta-section">
+    <div class="cta-bg">
+      <svg viewBox="0 0 1440 320" preserveAspectRatio="xMidYMid slice" fill="none">
+        <g stroke="rgba(255,255,255,.08)" stroke-width="1">
+          <line x1="0" y1="80" x2="1440" y2="80"/><line x1="0" y1="160" x2="1440" y2="160"/><line x1="0" y1="240" x2="1440" y2="240"/>
+        </g>
+        <g stroke="rgba(34,211,238,.2)" stroke-width="1.5" stroke-dasharray="4 4">
+          <path d="M0 200 Q360 100 720 180 T1440 160"/>
+        </g>
+        <g fill="rgba(34,211,238,.3)">
+          <circle cx="200" cy="120" r="3"/><circle cx="720" cy="180" r="4"/><circle cx="1200" cy="100" r="3"/>
+        </g>
+      </svg>
+    </div>
+    <div class="container">
+      <div class="cta-inner reveal">
+        <h2>想让跨境打单发货更高效？</h2>
+        <p>立即预约演示，专属顾问为您量身定制跨境履约解决方案</p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn--white btn--lg">预约演示</a>
+          <a href="contact.html" class="btn btn--ghost btn--lg">联系顾问</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 页脚 ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7v6c0 5 3.8 9.7 9 11 5.2-1.3 9-6 9-11V7l-9-5z" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            易境通
+          </a>
+          <p>跨境打单发货管理系统，让每一笔跨境订单更高效地完成履约。对接主流平台与 100+ 全球尾程物流渠道。</p>
+          <div class="footer-contact">
+            <div class="hotline">400-888-6688</div>
+            <div class="hotline-label">服务热线 · 工作日 9:00-18:00</div>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>产品</h4>
+          <ul>
+            <li><a href="products.html">产品功能</a></li>
+            <li><a href="products.html#solution">解决方案</a></li>
+            <li><a href="products.html#ecology">渠道生态</a></li>
+            <li><a href="products.html#open">开放平台</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>资源</h4>
+          <ul>
+            <li><a href="about.html#cases">客户案例</a></li>
+            <li><a href="contact.html">帮助中心</a></li>
+            <li><a href="products.html#open">API 文档</a></li>
+            <li><a href="contact.html">预约演示</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>公司</h4>
+          <ul>
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="about.html">团队介绍</a></li>
+            <li><a href="about.html">加入我们</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>法律</h4>
+          <ul>
+            <li><a href="#">服务协议</a></li>
+            <li><a href="#">隐私政策</a></li>
+            <li><a href="#">数据安全</a></li>
+            <li><a href="#">合规声明</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2025 易境通科技有限公司 版权所有</div>
+        <div class="links">
+          <a href="#">粤ICP备2025000888号</a>
+          <a href="#">粤公网安备44010602008888号</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
