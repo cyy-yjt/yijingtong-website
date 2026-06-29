@@ -17,8 +17,8 @@
 .page-banner .pb-bg svg { width: 100%; height: 100%; }
 .page-banner .container { position: relative; z-index: 1; }
 .page-banner h1 {
-  font-size: 44px; font-weight: 800;
-  letter-spacing: -1px; margin-bottom: 16px;
+  font-size: 40px; font-weight: 700;
+  letter-spacing: -.3px; margin-bottom: 16px;
 }
 .page-banner p {
   font-size: 17px; color: rgba(255,255,255,.8);
@@ -46,13 +46,13 @@
   display: inline-flex; align-items: center; gap: 6px;
   font-size: 13px; font-weight: 600;
   color: var(--c-primary);
-  background: #eff6ff;
+  background: var(--bg-blue-soft);
   padding: 6px 14px; border-radius: var(--r-full);
   margin-bottom: 16px;
 }
 .pf-content h3 {
-  font-size: 28px; font-weight: 800; color: var(--t-1);
-  margin-bottom: 16px; letter-spacing: -.5px;
+  font-size: 26px; font-weight: 700; color: var(--t-1);
+  margin-bottom: 16px; letter-spacing: -.3px;
 }
 .pf-content > p {
   font-size: 15px; color: var(--t-3); line-height: 1.9;
@@ -118,7 +118,7 @@
   padding: 3px 10px; border-radius: var(--r-full);
 }
 .mr-status.green { color: #16a34a; background: #dcfce7; }
-.mr-status.blue { color: #2563eb; background: #dbeafe; }
+.mr-status.blue { color: #2969ff; background: #e8f1ff; }
 .mr-status.orange { color: #ea580c; background: #ffedd5; }
 .mockup-chart {
   display: flex; align-items: flex-end; gap: 10px;
@@ -126,7 +126,7 @@
 }
 .mockup-chart .bar {
   flex: 1; border-radius: 6px 6px 0 0;
-  background: var(--grad-main);
+  background: var(--grad-btn);
   opacity: .8;
   transition: opacity .2s;
 }
@@ -184,7 +184,7 @@
 .api-list li { display: flex; gap: 14px; align-items: flex-start; }
 .api-list .api-num {
   width: 28px; height: 28px; border-radius: 8px;
-  background: var(--grad-main); color: #fff;
+  background: var(--grad-btn); color: #fff;
   font-size: 13px; font-weight: 700;
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
@@ -291,7 +291,7 @@
 .tl-dot {
   width: 16px; height: 16px; border-radius: 50%;
   background: var(--c-primary); border: 3px solid #fff;
-  box-shadow: 0 0 0 4px #eff6ff;
+  box-shadow: 0 0 0 4px var(--bg-blue-soft);
   justify-self: center;
   position: relative; z-index: 1;
 }
