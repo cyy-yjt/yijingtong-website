@@ -155,6 +155,16 @@
     });
   }
 
+  /* ===== 资讯滚动无缝循环：复制卡片 ===== */
+  const newsTrack = document.getElementById('newsTrack');
+  if (newsTrack) {
+    const cards = newsTrack.querySelectorAll('.news-card');
+    cards.forEach(card => {
+      const clone = card.cloneNode(true);
+      newsTrack.appendChild(clone);
+    });
+  }
+
   /* ===== 平滑滚动到锚点 ===== */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
