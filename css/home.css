@@ -2,11 +2,11 @@
    易境通 - 首页专属样式
    ============================================ */
 
-/* ===== 1. 首屏 Hero — 深蓝渐变背景（配合透明导航白字） ===== */
+/* ===== 1. 首屏 Hero — 浅蓝色渐变背景（紫鸟风格） ===== */
 .hero {
   position: relative;
-  padding: calc(var(--nav-h) + 40px) 0 56px;
-  background: linear-gradient(135deg, #0033d9 0%, #108bff 50%, #1596ff 100%);
+  padding: calc(var(--nav-h) + 50px) 0 56px;
+  background: linear-gradient(180deg, #e8f4ff 0%, #f0f8ff 40%, #ffffff 100%);
   overflow: hidden;
   text-align: center;
 }
@@ -25,8 +25,8 @@
   filter: blur(90px);
   z-index: 0;
 }
-.hero-glow--1 { top: -80px; right: 10%; background: rgba(67,189,255,.25); }
-.hero-glow--2 { bottom: -100px; left: 5%; background: rgba(0,51,217,.2); }
+.hero-glow--1 { top: -80px; right: 10%; background: rgba(67,189,255,.18); }
+.hero-glow--2 { bottom: -100px; left: 5%; background: rgba(21,150,255,.12); }
 
 .hero-inner--center {
   grid-template-columns: 1fr;
@@ -40,16 +40,16 @@
 }
 .hero-content--center .hero-actions { justify-content: center; }
 .hero-content--center .hero-desc { margin: 0 auto 32px; }
-.hero-content { color: #fff; }
+.hero-content { color: var(--t-1); }
 .hero-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   font-size: 13px;
   font-weight: 600;
-  color: #fff;
-  background: rgba(255,255,255,.12);
-  border: 1px solid rgba(255,255,255,.2);
+  color: var(--c-primary);
+  background: rgba(41,105,255,.08);
+  border: 1px solid rgba(41,105,255,.15);
   padding: 7px 18px;
   border-radius: var(--r-full);
   margin-bottom: 24px;
@@ -71,10 +71,10 @@
   line-height: 1.25;
   letter-spacing: -.5px;
   margin-bottom: 18px;
-  color: #fff;
+  color: var(--t-1);
 }
 .hero-title .grad {
-  background: linear-gradient(95deg, #6bb6ff 0%, #43bdff 100%);
+  background: linear-gradient(95deg, #108bff 0%, #1596ff 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -82,13 +82,13 @@
 .hero-sub {
   font-size: 20px;
   font-weight: 500;
-  color: rgba(255,255,255,.9);
+  color: var(--t-2);
   margin-bottom: 18px;
 }
 .hero-desc {
   font-size: 15px;
   line-height: 1.9;
-  color: rgba(255,255,255,.7);
+  color: var(--t-3);
   margin-bottom: 32px;
   max-width: 540px;
 }
@@ -224,17 +224,17 @@ select.form-control {
 .stat-num .unit { font-size: 20px; color: var(--c-primary); }
 .stat-label { font-size: 14px; color: var(--t-3); margin-top: 10px; }
 
-/* ===== 3. 为什么选择 ===== */
+/* ===== 3. 为什么选择（紧凑排版，参考极风） ===== */
 .pain-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 20px;
 }
 .pain-card {
   background: #fff;
   border: 1px solid var(--bd-1);
   border-radius: var(--r-lg);
-  padding: 36px 30px;
+  padding: 28px 24px;
   transition: all .35s var(--ease);
   position: relative;
   overflow: hidden;
@@ -252,36 +252,27 @@ select.form-control {
 .pain-card:hover {
   border-color: transparent;
   box-shadow: var(--sh-lg);
-  transform: translateY(-6px);
+  transform: translateY(-4px);
 }
 .pain-card:hover::before { transform: scaleX(1); }
-.pain-num {
-  font-size: 14px; font-weight: 700;
-  color: var(--c-blue);
-  letter-spacing: 1px;
-  margin-bottom: 16px;
-}
+.pain-num { display: none; }
 .pain-icon {
-  width: 56px; height: 56px;
+  width: 44px; height: 44px;
   border-radius: var(--r-md);
   background: var(--grad-soft);
   display: flex; align-items: center; justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
-.pain-icon svg { width: 30px; height: 30px; }
+.pain-icon svg { width: 24px; height: 24px; }
 .pain-card h3 {
-  font-size: 19px; font-weight: 700; color: var(--t-1);
-  margin-bottom: 10px;
+  font-size: 17px; font-weight: 700; color: var(--t-1);
+  margin-bottom: 8px;
 }
-.pain-card .pain-q {
-  font-size: 14px; color: var(--t-4); margin-bottom: 16px;
-}
+.pain-card .pain-q { display: none; }
 .pain-solution {
-  font-size: 14px; color: var(--t-2); line-height: 1.8;
-  padding-top: 16px;
-  border-top: 1px dashed var(--bd-1);
+  font-size: 13px; color: var(--t-3); line-height: 1.7;
 }
-.pain-solution strong { color: var(--c-primary); }
+.pain-solution strong { color: var(--c-primary); font-weight: 600; }
 
 /* ===== 4. 核心功能矩阵 ===== */
 .feature-grid {
