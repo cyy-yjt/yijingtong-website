@@ -100,7 +100,7 @@
     });
   }
 
-  /* ===== 预约表单提交 ===== */
+  /* ===== 注册表单提交 ===== */
   const demoForm = document.getElementById('demoForm');
   const formSuccess = document.getElementById('formSuccess');
   if (demoForm) {
@@ -112,8 +112,46 @@
         demoForm.phone.focus();
         return;
       }
+      if (!demoForm.code || !demoForm.code.value.trim()) {
+        alert('请输入验证码');
+        demoForm.code.focus();
+        return;
+      }
+      if (demoForm.password && demoForm.password.value.length < 6) {
+        alert('密码至少 6 位');
+        demoForm.password.focus();
+        return;
+      }
       demoForm.style.display = 'none';
       if (formSuccess) formSuccess.classList.add('show');
+    });
+  }
+
+  /* ===== 验证码倒计时 ===== */
+  const sendCodeBtn = document.getElementById('sendCode');
+  if (sendCodeBtn) {
+    sendCodeBtn.addEventListener('click', () => {
+      const phone = demoForm && demoForm.phone ? demoForm.phone.value.trim() : '';
+      if (!/^1[3-9]\d{9}$/.test(phone)) {
+        alert('请先输入正确的手机号');
+        if (demoForm && demoForm.phone) demoForm.phone.focus();
+        return;
+      }
+      let count = 60;
+      sendCodeBtn.disabled = true;
+      sendCodeBtn.style.opacity = '.6';
+      sendCodeBtn.textContent = count + 's 后重发';
+      const timer = setInterval(() => {
+        count--;
+        if (count <= 0) {
+          clearInterval(timer);
+          sendCodeBtn.disabled = false;
+          sendCodeBtn.style.opacity = '1';
+          sendCodeBtn.textContent = '获取验证码';
+        } else {
+          sendCodeBtn.textContent = count + 's 后重发';
+        }
+      }, 1000);
     });
   }
 
