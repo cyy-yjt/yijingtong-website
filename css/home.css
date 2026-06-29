@@ -683,8 +683,20 @@ select.form-control {
 .news-card-img {
   width: 100%; height: 160px;
   display: flex; align-items: center; justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
-.news-card-img svg { width: 48px; height: 48px; }
+.news-card-img .ni-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+}
+.news-card-img .ni-icon {
+  width: 52px; height: 52px;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,.15));
+}
 .news-card-body { padding: 20px 22px; }
 .news-card-tag {
   display: inline-block;
