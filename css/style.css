@@ -171,23 +171,32 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 .btn--block { width: 100%; }
 .btn svg { width: 18px; height: 18px; }
 
-/* ===== 导航栏 ===== */
+/* ===== 导航栏 — 透明覆盖式（参考JFWMS） ===== */
 .navbar {
   position: fixed;
   top: 0; left: 0; right: 0;
   height: var(--nav-h);
   z-index: 1000;
-  background: rgba(255,255,255,.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: transparent;
   border-bottom: 1px solid transparent;
   transition: all .3s var(--ease);
 }
 .navbar.scrolled {
   background: rgba(255,255,255,.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-bottom-color: var(--bd-1);
   box-shadow: var(--sh-sm);
 }
+/* 透明状态下文字白色 */
+.navbar:not(.scrolled) .nav-logo,
+.navbar:not(.scrolled) .nav-menu a,
+.navbar:not(.scrolled) .nav-login { color: #fff; }
+.navbar:not(.scrolled) .nav-menu a:hover { color: rgba(255,255,255,.8); background: rgba(255,255,255,.1); }
+.navbar:not(.scrolled) .nav-menu a.active { color: #fff; }
+.navbar:not(.scrolled) .logo-img { filter: brightness(0) invert(1); }
+/* 滚动后文字恢复深色 */
+.navbar.scrolled .logo-img { filter: none; }
 .nav-inner {
   max-width: var(--w-max);
   height: 100%;
@@ -235,9 +244,27 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 .nav-menu a:hover { color: var(--c-primary); background: var(--bg-blue-soft); }
 .nav-menu a.active { color: var(--c-primary); }
 .nav-actions { display: flex; align-items: center; gap: 10px; }
-.nav-actions .btn { padding: 9px 22px; font-size: 14px; }
-.nav-actions .nav-login { font-size: 14px; font-weight: 600; color: var(--t-2); padding: 9px 16px; }
-.nav-actions .nav-login:hover { color: var(--c-primary); }
+.nav-actions .btn { padding: 8px 22px; font-size: 14px; }
+.nav-actions .nav-login {
+  font-size: 14px; font-weight: 600;
+  color: var(--t-2); padding: 8px 18px;
+  border-radius: var(--r-full);
+  border: 1px solid transparent;
+  transition: all .25s var(--ease);
+}
+.navbar:not(.scrolled) .nav-login { color: #fff; border-color: rgba(255,255,255,.4); }
+.navbar:not(.scrolled) .nav-login:hover { background: rgba(255,255,255,.15); border-color: rgba(255,255,255,.6); }
+.navbar.scrolled .nav-login:hover { color: var(--c-primary); border-color: var(--c-primary); }
+/* 免费注册按钮 — 白底蓝字（透明导航时），滚动后蓝底白字 */
+.nav-actions .btn--register {
+  background: #fff;
+  color: var(--c-primary-dark);
+  border-radius: var(--r-full);
+  font-weight: 600;
+  box-shadow: 0 2px 12px rgba(0,0,0,.1);
+}
+.navbar:not(.scrolled) .btn--register { background: #fff; color: var(--c-primary-dark); }
+.navbar.scrolled .btn--register { background: var(--grad-btn); color: #fff; box-shadow: var(--sh-blue); }
 .nav-toggle {
   display: none;
   width: 40px; height: 40px;

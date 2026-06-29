@@ -2,11 +2,11 @@
    易境通 - 首页专属样式
    ============================================ */
 
-/* ===== 1. 首屏 Hero — 浅蓝色渐变背景（精简居中版） ===== */
+/* ===== 1. 首屏 Hero — 深蓝渐变背景（配合透明导航白字） ===== */
 .hero {
   position: relative;
-  padding: calc(var(--nav-h) + 50px) 0 56px;
-  background: linear-gradient(180deg, #e8f4ff 0%, #f0f8ff 40%, #ffffff 100%);
+  padding: calc(var(--nav-h) + 40px) 0 56px;
+  background: linear-gradient(135deg, #0033d9 0%, #108bff 50%, #1596ff 100%);
   overflow: hidden;
   text-align: center;
 }
@@ -25,8 +25,8 @@
   filter: blur(90px);
   z-index: 0;
 }
-.hero-glow--1 { top: -80px; right: 10%; background: rgba(67,189,255,.18); }
-.hero-glow--2 { bottom: -100px; left: 5%; background: rgba(21,150,255,.12); }
+.hero-glow--1 { top: -80px; right: 10%; background: rgba(67,189,255,.25); }
+.hero-glow--2 { bottom: -100px; left: 5%; background: rgba(0,51,217,.2); }
 
 .hero-inner--center {
   grid-template-columns: 1fr;
@@ -36,19 +36,20 @@
   max-width: 720px;
   margin: 0 auto;
   text-align: center;
+  color: #fff;
 }
 .hero-content--center .hero-actions { justify-content: center; }
 .hero-content--center .hero-desc { margin: 0 auto 32px; }
-.hero-content { color: var(--t-1); }
+.hero-content { color: #fff; }
 .hero-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   font-size: 13px;
   font-weight: 600;
-  color: var(--c-primary);
-  background: rgba(41,105,255,.08);
-  border: 1px solid rgba(41,105,255,.15);
+  color: #fff;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.2);
   padding: 7px 18px;
   border-radius: var(--r-full);
   margin-bottom: 24px;
@@ -70,10 +71,10 @@
   line-height: 1.25;
   letter-spacing: -.5px;
   margin-bottom: 18px;
-  color: var(--t-1);
+  color: #fff;
 }
 .hero-title .grad {
-  background: linear-gradient(95deg, #108bff 0%, #1596ff 100%);
+  background: linear-gradient(95deg, #6bb6ff 0%, #43bdff 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -81,13 +82,13 @@
 .hero-sub {
   font-size: 20px;
   font-weight: 500;
-  color: var(--t-2);
+  color: rgba(255,255,255,.9);
   margin-bottom: 18px;
 }
 .hero-desc {
   font-size: 15px;
   line-height: 1.9;
-  color: var(--t-3);
+  color: rgba(255,255,255,.7);
   margin-bottom: 32px;
   max-width: 540px;
 }
@@ -633,6 +634,12 @@ select.form-control {
 .news-scroll-section {
   padding: 56px 0 64px;
   background: #fff;
+}
+.news-scroll-section--notitle {
+  padding: 40px 0 56px;
+}
+.news-scroll-section--notitle .news-scroll-wrap {
+  margin-top: 0;
 }
 .news-scroll-head {
   display: flex;

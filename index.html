@@ -10,7 +10,7 @@
 </head>
 <body>
 
-  <!-- ========== 顶部导航 ========== -->
+  <!-- ========== 顶部导航（透明覆盖式） ========== -->
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
@@ -23,27 +23,27 @@
       </ul>
       <div class="nav-actions">
         <a href="#" class="nav-login">登录</a>
-        <a href="#" class="btn btn--primary">免费注册</a>
+        <a href="#register" class="btn btn--register">免费注册</a>
       </div>
       <button class="nav-toggle" id="navToggle" aria-label="菜单"><span></span><span></span><span></span></button>
     </div>
   </nav>
 
-  <!-- ========== 1. 首屏 Hero（精简版，利于SEO） ========== -->
-  <section class="hero">
+  <!-- ========== 1. 首屏 Hero（深蓝渐变背景，透明导航白字） ========== -->
+  <section class="hero" id="register">
     <div class="hero-bg">
-      <svg viewBox="0 0 1440 500" preserveAspectRatio="xMidYMid slice" fill="none">
-        <g stroke="rgba(41,105,255,.05)" stroke-width="1">
-          <line x1="0" y1="120" x2="1440" y2="120"/><line x1="0" y1="250" x2="1440" y2="250"/><line x1="0" y1="380" x2="1440" y2="380"/>
-          <line x1="240" y1="0" x2="240" y2="500"/><line x1="480" y1="0" x2="480" y2="500"/><line x1="720" y1="0" x2="720" y2="500"/><line x1="960" y1="0" x2="960" y2="500"/><line x1="1200" y1="0" x2="1200" y2="500"/>
+      <svg viewBox="0 0 1440 560" preserveAspectRatio="xMidYMid slice" fill="none">
+        <g stroke="rgba(255,255,255,.06)" stroke-width="1">
+          <line x1="0" y1="140" x2="1440" y2="140"/><line x1="0" y1="280" x2="1440" y2="280"/><line x1="0" y1="420" x2="1440" y2="420"/>
+          <line x1="240" y1="0" x2="240" y2="560"/><line x1="480" y1="0" x2="480" y2="560"/><line x1="720" y1="0" x2="720" y2="560"/><line x1="960" y1="0" x2="960" y2="560"/><line x1="1200" y1="0" x2="1200" y2="560"/>
         </g>
-        <g stroke="rgba(67,189,255,.3)" stroke-width="1.5" stroke-dasharray="4 4">
-          <path d="M200 300 Q500 120 800 250 T1300 200"/>
-          <path d="M150 380 Q600 450 1000 320 T1350 380"/>
+        <g stroke="rgba(67,189,255,.35)" stroke-width="1.5" stroke-dasharray="4 4">
+          <path d="M200 320 Q500 140 800 280 T1300 220"/>
+          <path d="M150 400 Q600 470 1000 340 T1350 400"/>
         </g>
-        <g fill="rgba(67,189,255,.4)">
-          <circle cx="200" cy="300" r="4"/><circle cx="800" cy="250" r="5"/><circle cx="1300" cy="200" r="4"/>
-          <circle cx="150" cy="380" r="4"/><circle cx="1000" cy="320" r="5"/><circle cx="1350" cy="380" r="4"/>
+        <g fill="rgba(67,189,255,.5)">
+          <circle cx="200" cy="320" r="4"/><circle cx="800" cy="280" r="5"/><circle cx="1300" cy="220" r="4"/>
+          <circle cx="150" cy="400" r="4"/><circle cx="1000" cy="340" r="5"/><circle cx="1350" cy="400" r="4"/>
         </g>
       </svg>
     </div>
@@ -65,25 +65,19 @@
             对接主流跨境电商平台与 100+ 全球尾程物流渠道，支持订单同步、渠道比价、国际面单打印、物流轨迹回传、多币种结算与客户账单管理。
           </p>
           <div class="hero-actions">
-            <a href="#" class="btn btn--primary btn--lg">
+            <a href="#register" class="btn btn--primary btn--lg">
               <svg viewBox="0 0 24 24" fill="none"><path d="M5 4l14 8-14 8V4z" fill="currentColor"/></svg>
-              预约产品演示
+              免费注册
             </a>
-            <a href="#" class="btn btn--outline btn--lg">免费体验</a>
+            <a href="help.html" class="btn btn--ghost btn--lg">了解产品</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== 2. 资讯/产品更新滚动 ========== -->
-  <section class="news-scroll-section">
-    <div class="container">
-      <div class="news-scroll-head">
-        <h2 class="news-scroll-title">资讯与产品更新</h2>
-        <a href="#" class="news-scroll-more">查看全部 →</a>
-      </div>
-    </div>
+  <!-- ========== 2. 资讯/产品更新滚动（无标题，直接滚动） ========== -->
+  <section class="news-scroll-section news-scroll-section--notitle">
     <div class="news-scroll-wrap">
       <div class="news-scroll-track" id="newsTrack">
         <a href="#" class="news-card">
