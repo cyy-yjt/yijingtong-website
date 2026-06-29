@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>帮助中心 - 易境通跨境打单发货管理系统</title>
+  <meta name="description" content="易境通帮助中心，提供产品使用教程、常见问题解答、API对接文档等，帮您快速上手跨境打单发货系统。">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/page.css">
+  <style>
+    /* ===== 帮助中心专属样式 ===== */
+    .help-hero {
+      padding: calc(var(--nav-h) + 64px) 0 56px;
+      background: linear-gradient(180deg, #e8f4ff 0%, #f0f8ff 60%, #ffffff 100%);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .help-hero::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: 10%;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: rgba(67,189,255,.12);
+      filter: blur(80px);
+    }
+    .help-hero .container { position: relative; z-index: 1; }
+    .help-hero h1 {
+      font-size: 36px; font-weight: 700; color: var(--t-1);
+      margin-bottom: 12px; letter-spacing: -.3px;
+    }
+    .help-hero p {
+      font-size: 16px; color: var(--t-3); margin-bottom: 36px;
+    }
+    .help-search-box {
+      max-width: 600px; margin: 0 auto;
+      position: relative;
+    }
+    .help-search-box input {
+      width: 100%;
+      padding: 16px 56px 16px 24px;
+      border: 1.5px solid var(--bd-1);
+      border-radius: var(--r-full);
+      font-size: 15px;
+      background: #fff;
+      box-shadow: 0 4px 24px rgba(67,189,255,.1);
+      transition: all .25s var(--ease);
+    }
+    .help-search-box input:focus {
+      outline: none;
+      border-color: var(--c-primary);
+      box-shadow: 0 4px 24px rgba(41,105,255,.15);
+    }
+    .help-search-box .search-btn {
+      position: absolute;
+      right: 8px; top: 50%;
+      transform: translateY(-50%);
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: var(--grad-btn);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      border: none;
+    }
+    .help-search-box .search-btn svg { width: 20px; height: 20px; color: #fff; }
+    .help-hot-search {
+      display: flex; gap: 10px; justify-content: center;
+      margin-top: 20px; flex-wrap: wrap;
+    }
+    .help-hot-search a {
+      font-size: 13px; color: var(--t-3);
+      background: rgba(255,255,255,.8);
+      border: 1px solid var(--bd-1);
+      padding: 6px 16px;
+      border-radius: var(--r-full);
+      transition: all .2s;
+    }
+    .help-hot-search a:hover { color: var(--c-primary); border-color: var(--c-primary); background: #fff; }
+
+    /* 热门文章 */
+    .hot-articles {
+      padding: 64px 0;
+    }
+    .hot-articles-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    .hot-column {
+      background: #fff;
+      border: 1px solid var(--bd-1);
+      border-radius: var(--r-lg);
+      padding: 32px 28px;
+    }
+    .hot-column-head {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 20px; padding-bottom: 20px;
+      border-bottom: 1px solid var(--bd-2);
+    }
+    .hot-column-icon {
+      width: 44px; height: 44px; border-radius: var(--r-md);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .hot-column-icon svg { width: 24px; height: 24px; color: #fff; }
+    .hot-column h3 { font-size: 18px; font-weight: 700; color: var(--t-1); }
+    .hot-column .col-sub { font-size: 13px; color: var(--t-4); margin-top: 2px; }
+    .hot-article-list { display: flex; flex-direction: column; gap: 4px; }
+    .hot-article-item {
+      display: flex; align-items: center; gap: 10px;
+      padding: 12px 12px;
+      border-radius: var(--r-sm);
+      font-size: 14px; color: var(--t-2);
+      transition: all .2s var(--ease);
+      cursor: pointer;
+    }
+    .hot-article-item:hover { background: var(--bg-blue-soft); color: var(--c-primary); }
+    .hot-article-item .dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--c-primary); opacity: .4; flex-shrink: 0;
+    }
+    .hot-article-item:hover .dot { opacity: 1; }
+
+    /* 文章分类 */
+    .help-categories {
+      padding: 64px 0;
+      background: var(--bg-soft);
+    }
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .cat-card {
+      background: #fff;
+      border: 1px solid var(--bd-1);
+      border-radius: var(--r-lg);
+      padding: 28px 24px;
+      transition: all .35s var(--ease);
+    }
+    .cat-card:hover { box-shadow: var(--sh-lg); transform: translateY(-3px); border-color: transparent; }
+    .cat-card-head { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+    .cat-icon {
+      width: 48px; height: 48px; border-radius: var(--r-md);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .cat-icon svg { width: 26px; height: 26px; color: #fff; }
+    .cat-card h3 { font-size: 16px; font-weight: 700; color: var(--t-1); }
+    .cat-card .cat-count { font-size: 12px; color: var(--t-4); }
+    .cat-card ul { display: flex; flex-direction: column; gap: 8px; }
+    .cat-card li a {
+      font-size: 13px; color: var(--t-3);
+      display: flex; align-items: center; gap: 6px;
+      transition: color .2s;
+    }
+    .cat-card li a:hover { color: var(--c-primary); }
+    .cat-card li a::before { content: '·'; color: var(--t-4); }
+
+    /* FAQ 快捷入口 */
+    .help-quick {
+      padding: 56px 0;
+      text-align: center;
+    }
+    .help-quick h2 { font-size: 28px; font-weight: 700; color: var(--t-1); margin-bottom: 12px; }
+    .help-quick p { font-size: 15px; color: var(--t-3); margin-bottom: 28px; }
+    .help-quick-actions { display: flex; gap: 16px; justify-content: center; }
+
+    @media (max-width: 1024px) {
+      .hot-articles-grid { grid-template-columns: 1fr; }
+      .cat-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .help-hero h1 { font-size: 26px; }
+      .cat-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 导航 -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo-color.png" alt="易境通" class="logo-img">
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="help.html" class="active">帮助中心</a></li>
+        <li><a href="about.html">关于我们</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="#" class="nav-login">登录</a>
+        <a href="#" class="btn btn--primary">免费注册</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="菜单"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- 搜索区 -->
+  <section class="help-hero">
+    <div class="container">
+      <h1>嗨，有什么可以帮你？</h1>
+      <p>搜索问题或浏览下方分类，快速找到答案</p>
+      <div class="help-search-box">
+        <input type="text" placeholder="搜索问题，如：如何批量打印面单？">
+        <button class="search-btn">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="help-hot-search">
+        <a href="#">批量打单</a>
+        <a href="#">渠道接入</a>
+        <a href="#">订单同步</a>
+        <a href="#">轨迹回传</a>
+        <a href="#">多币种结算</a>
+        <a href="#">API对接</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 热门文章（第二个模块） -->
+  <section class="hot-articles">
+    <div class="container">
+      <div class="section-head reveal" style="text-align:left;max-width:none;margin-bottom:36px;">
+        <h2 class="section-title" style="font-size:28px;">热门文章</h2>
+      </div>
+      <div class="hot-articles-grid">
+        <!-- 左列：使用教程 -->
+        <div class="hot-column reveal">
+          <div class="hot-column-head">
+            <div class="hot-column-icon" style="background:linear-gradient(135deg,#108bff,#0033d9);">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 19.5A2.5 2.5 0 016.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <h3>使用教程</h3>
+              <div class="col-sub">快速上手易境通各项功能</div>
+            </div>
+          </div>
+          <div class="hot-article-list">
+            <a class="hot-article-item"><span class="dot"></span>如何接入跨境电商平台并同步订单？</a>
+            <a class="hot-article-item"><span class="dot"></span>国际面单批量打印操作指南</a>
+            <a class="hot-article-item"><span class="dot"></span>如何配置尾程物流渠道账号？</a>
+            <a class="hot-article-item"><span class="dot"></span>一键比价与智能渠道推荐使用方法</a>
+            <a class="hot-article-item"><span class="dot"></span>地址校验规则与异常订单处理</a>
+            <a class="hot-article-item"><span class="dot"></span>物流轨迹回传与异常预警设置</a>
+          </div>
+        </div>
+
+        <!-- 右列：常见问题 -->
+        <div class="hot-column reveal reveal-d1">
+          <div class="hot-column-head">
+            <div class="hot-column-icon" style="background:linear-gradient(135deg,#1596ff,#43bdff);">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 22C6.5 22 2 17.5 2 12S6.5 2 12 2s10 4.5 10 10-4.5 10-10 10zM12 8v4M12 16h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <h3>常见问题</h3>
+              <div class="col-sub">用户最常遇到的问题解答</div>
+            </div>
+          </div>
+          <div class="hot-article-list">
+            <a class="hot-article-item"><span class="dot"></span>易境通支持哪些跨境电商平台？</a>
+            <a class="hot-article-item"><span class="dot"></span>系统如何收费？有免费试用吗？</a>
+            <a class="hot-article-item"><span class="dot"></span>面单打印支持哪些规格和渠道？</a>
+            <a class="hot-article-item"><span class="dot"></span>多币种结算的汇率如何更新？</a>
+            <a class="hot-article-item"><span class="dot"></span>如何获取 API Token 进行系统对接？</a>
+            <a class="hot-article-item"><span class="dot"></span>数据安全和隐私如何保障？</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 文章分类 -->
+  <section class="help-categories">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-eyebrow">CATEGORIES</span>
+        <h2 class="section-title">浏览所有分类</h2>
+        <p class="section-sub">按分类查找您需要的内容</p>
+      </div>
+      <div class="cat-grid">
+        <div class="cat-card reveal">
+          <div class="cat-card-head">
+            <div class="cat-icon" style="background:linear-gradient(135deg,#108bff,#0033d9);"><svg viewBox="0 0 24 24" fill="none"><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18" stroke="currentColor" stroke-width="1.8"/></svg></div>
+            <div><h3>订单管理</h3><div class="cat-count">12 篇文章</div></div>
+          </div>
+          <ul>
+            <li><a>订单同步与自动拉取</a></li>
+            <li><a>订单合并与拆分</a></li>
+            <li><a>智能分仓分渠道</a></li>
+            <li><a>订单状态管理</a></li>
+          </ul>
+        </div>
+        <div class="cat-card reveal reveal-d1">
+          <div class="cat-card-head">
+            <div class="cat-icon" style="background:linear-gradient(135deg,#1596ff,#43bdff);"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9V4h12v5M6 18h12v3H6v-3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M6 9h12v9H6V9z" stroke="currentColor" stroke-width="1.8"/></svg></div>
+            <div><h3>打单发货</h3><div class="cat-count">15 篇文章</div></div>
+          </div>
+          <ul>
+            <li><a>面单批量打印</a></li>
+            <li><a>自定义面单模板</a></li>
+            <li><a>热敏与A4规格设置</a></li>
+            <li><a>断点续打与任务队列</a></li>
+          </ul>
+        </div>
+        <div class="cat-card reveal reveal-d2">
+          <div class="cat-card-head">
+            <div class="cat-icon" style="background:linear-gradient(135deg,#0033d9,#108bff);"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="14" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="3" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="14" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.8"/></svg></div>
+            <div><h3>渠道管理</h3><div class="cat-count">10 篇文章</div></div>
+          </div>
+          <ul>
+            <li><a>尾程渠道账号托管</a></li>
+            <li><a>渠道分组与权限隔离</a></li>
+            <li><a>配额监控与预警</a></li>
+            <li><a>渠道评分与历史数据</a></li>
+          </ul>
+        </div>
+        <div class="cat-card reveal">
+          <div class="cat-card-head">
+            <div class="cat-icon" style="background:linear-gradient(135deg,#43bdff,#1596ff);"><svg viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 7h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+            <div><h3>比价与路由</h3><div class="cat-count">8 篇文章</div></div>
+          </div>
+          <ul>
+            <li><a>多渠道运费实时对比</a></li>
+            <li><a>智能渠道推荐规则</a></li>
+            <li><a>时效与成本计算</a></li>
+            <li><a>自定义路由策略</a></li>
+          </ul>
+        </div>
+        <div class="cat-card reveal reveal-d1">
+          <div class="cat-card-head">
+            <div class="cat-icon" style="background:linear-gradient(135deg,#108bff,#1596ff);"><svg viewBox="0 0 24 24" fill="none"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div><h3>结算与账单</h3><div class="cat-count">11 篇文章</div></div>
+          </div>
+          <ul>
+            <li><a>多币种汇率自动换算</a></li>
+            <li><a>客户账单自动生成</a></li>
+            <li><a>分账管理与费用拆分</a></li>
+            <li><a>报表导出与对账</a></li>
+          </ul>
+        </div>
+        <div class="cat-card reveal reveal-d2">
+          <div class="cat-card-head">
+            <div class="cat-icon" style="background:linear-gradient(135deg,#0033d9,#1596ff);"><svg viewBox="0 0 24 24" fill="none"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div><h3>API 与集成</h3><div class="cat-count">9 篇文章</div></div>
+          </div>
+          <ul>
+            <li><a>API 认证与 Token 获取</a></li>
+            <li><a>订单同步接口</a></li>
+            <li><a>Webhook 回调配置</a></li>
+            <li><a>沙箱环境与调试</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 快捷入口 -->
+  <section class="help-quick">
+    <div class="container">
+      <h2>没找到答案？</h2>
+      <p>联系我们的客服团队，工作日 9:00-21:00 为您服务</p>
+      <div class="help-quick-actions">
+        <a href="#" class="btn btn--primary btn--lg">联系在线客服</a>
+        <a href="about.html" class="btn btn--outline btn--lg">关于我们</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <img src="assets/logo-white.png" alt="易境通" class="logo-img-footer">
+          </a>
+          <p>跨境打单发货管理系统，让每一笔跨境订单更高效地完成履约。对接主流平台与 100+ 全球尾程物流渠道。</p>
+          <div class="footer-contact"><div class="hotline">400-888-6688</div><div class="hotline-label">服务热线 · 工作日 9:00-18:00</div></div>
+        </div>
+        <div class="footer-col"><h4>产品</h4><ul><li><a href="help.html">产品功能</a></li><li><a href="help.html">解决方案</a></li><li><a href="help.html">渠道生态</a></li><li><a href="help.html">开放平台</a></li></ul></div>
+        <div class="footer-col"><h4>资源</h4><ul><li><a href="help.html">帮助中心</a></li><li><a href="help.html">使用教程</a></li><li><a href="help.html">API 文档</a></li><li><a href="help.html">预约演示</a></li></ul></div>
+        <div class="footer-col"><h4>公司</h4><ul><li><a href="about.html">关于我们</a></li><li><a href="about.html">团队介绍</a></li><li><a href="about.html">加入我们</a></li><li><a href="help.html">联系我们</a></li></ul></div>
+        <div class="footer-col"><h4>法律</h4><ul><li><a href="#">服务协议</a></li><li><a href="#">隐私政策</a></li><li><a href="#">数据安全</a></li><li><a href="#">合规声明</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><div>© 2025 易境通科技有限公司 版权所有</div><div class="links"><a href="#">粤ICP备2025000888号</a><a href="#">粤公网安备44010602008888号</a></div></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

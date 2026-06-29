@@ -234,8 +234,10 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 }
 .nav-menu a:hover { color: var(--c-primary); background: var(--bg-blue-soft); }
 .nav-menu a.active { color: var(--c-primary); }
-.nav-actions { display: flex; align-items: center; gap: 12px; }
+.nav-actions { display: flex; align-items: center; gap: 10px; }
 .nav-actions .btn { padding: 9px 22px; font-size: 14px; }
+.nav-actions .nav-login { font-size: 14px; font-weight: 600; color: var(--t-2); padding: 9px 16px; }
+.nav-actions .nav-login:hover { color: var(--c-primary); }
 .nav-toggle {
   display: none;
   width: 40px; height: 40px;
