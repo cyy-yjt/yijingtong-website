@@ -206,6 +206,11 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
   color: var(--t-1);
   letter-spacing: -.5px;
 }
+.nav-logo .logo-img {
+  height: 36px;
+  width: auto;
+  display: block;
+}
 .nav-logo .logo-mark {
   width: 36px; height: 36px;
   border-radius: 10px;
@@ -263,6 +268,12 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
   border-bottom: 1px solid rgba(255,255,255,.08);
 }
 .footer-brand .nav-logo { color: #fff; margin-bottom: 20px; }
+.footer-brand .logo-img-footer {
+  height: 40px;
+  width: auto;
+  display: block;
+  filter: brightness(0) invert(1);
+}
 .footer-brand p { font-size: 14px; line-height: 1.8; max-width: 280px; }
 .footer-contact { margin-top: 20px; }
 .footer-contact .hotline {
